@@ -1,0 +1,115 @@
+{
+	"clg": {
+		"prefix": "clg",
+		"body": "console.log($1)",
+		"description": "console.log"
+	},
+	"ceg": {
+		"prefix": "ceg",
+		"body": "console.error($1)",
+		"description": "console.error"
+	},
+	"mcon": {
+		"prefix": "mcon",
+		"body": [
+			"import { connect } from \"mongoose\";\r",
+			"\r",
+			"let isConnected = false;\r",
+			"\r",
+			"export const connectDb = async () => {\r",
+			"  try {\r",
+			"    if (isConnected === true) return;\r",
+			"    const db = await connect(process.env.MONGO_URI!);\r",
+			"    isConnected = true;\r",
+			"    console.log(`DataBase is Connect with ${db.connection.host}`);\r",
+			"  } catch (error) {\r",
+			"    console.log(error);\r",
+			"    process.exit();\r",
+			"  }\r",
+			"};"
+		],
+		"description": "connect to db"
+	},
+	"ncrud": {
+		"prefix": "ncrud",
+		"body": [
+			"export const $1 = async (request: NextRequest) => {",
+			"  connectDb()",
+			"  try {",
+			"    $0",
+			"    ;",
+			"  } catch (error: any) {",
+			"    return NextResponse.json({error:error.message},{status:500});",
+			"",
+			"  }",
+			"",
+			"}"
+		],
+		"description": "next  crud"
+	},
+	"nicrud": {
+		"prefix": "nicrud",
+		"body": [
+			" import {NextRequest,NextResponse} from 'next/server';",
+			"",
+			"export const $1 = async (request: NextRequest) => {",
+			"  connectDb$2()",
+			"  try {",
+			"    $0",
+			"",
+			"  } catch (error: any) {",
+			"    return NextResponse.json({error:error.message},{status:500});",
+			"",
+			"  }",
+			"",
+			"}"
+		],
+		"description": "next import crud"
+	},
+	"fcop": {
+		"prefix": "fcom",
+		"body": [
+			"export default function $1(){",
+			"  ",
+			"  return (",
+			"    <div>",
+			"      $1",
+			"    </div>",
+			"  )",
+			"}"
+		],
+		"description": "react function component"
+	},
+	"acop": {
+		"prefix": "acom",
+		"body": [
+			"export const $1 =()=>{",
+			"  ",
+			"  return (",
+			"    <div>",
+			"      $1",
+			"    </div>",
+			"  )",
+			"}"
+		],
+		"description": "react arrow function component"
+	},
+	"msc": {
+		"prefix": "msc",
+		"body": [
+			"// -------- $1 Schema Start Here --------//",
+			"",
+			"const $2 = new mongoose.Schema(",
+			"  {",
+			"    $0",
+			"  },",
+			"  { timestamps: true }",
+			");",
+			"",
+			"export const $1 = mongoose.models?.$1 || mongoose.model(\"$1\", $2);",
+			"",
+			"// -------- $1 Schema End Here --------//"
+		],
+		"description": "mongoose-schema"
+	}
+}

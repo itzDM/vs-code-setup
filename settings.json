@@ -1,0 +1,32 @@
+{
+  "terminal.integrated.env.linux": {},
+  "window.commandCenter": false,
+  "editor.wordWrap": "on",
+  "editor.mouseWheelZoom": true,
+  "terminal.integrated.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.formatOnSave.enabled": true,
+  "editor.foldingImportsByDefault": false,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.sideBar.location": "right",
+  "explorer.confirmDelete": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.colorTheme": "WD Dark Cool",
+  "git.openRepositoryInParentFolders": "never",
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontSize": 26,
+  "print.folder.includeFileList": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "security.workspace.trust.untrustedFiles": "open"
+}

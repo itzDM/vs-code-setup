@@ -1,0 +1,41 @@
+{
+	"clg": {
+		"prefix": "clg",
+		"body": "console.log($1)",
+		"description": "console.log"
+	},
+	"ceg": {
+		"prefix": "ceg",
+		"body": "console.error($1)",
+		"description": "console.error"
+	}
+	,
+	"fcop": {
+		"prefix": "fcom",
+		"body": [
+			"export default function $1(){",
+			"  ",
+			"  return (",
+			"    <div>",
+			"      $1",
+			"    </div>",
+			"  )",
+			"}"
+		],
+		"description": "react function component"
+	},
+	"acop": {
+		"prefix": "acom",
+		"body": [
+			"export const $1 =()=>{",
+			"  ",
+			"  return (",
+			"    <div>",
+			"      $1",
+			"    </div>",
+			"  )",
+			"}"
+		],
+		"description": "react arrow function component"
+	}
+}
